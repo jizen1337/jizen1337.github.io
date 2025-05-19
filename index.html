@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Engineering Exam</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 font-sans min-h-screen flex flex-col">
+    <header class="bg-blue-600 text-white p-4 shadow-md">
+        <h1 class="text-3xl font-bold text-center">Software Engineering Exam</h1>
+    </header>
+
+    <main class="flex-grow p-4 max-w-4xl mx-auto">
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">Choose Exam Type</h2>
+            <div class="flex space-x-4">
+                <button id="mcqBtn" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">Multiple Choice Questions</button>
+                <button id="tfBtn" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">True/False Questions</button>
+            </div>
+            <div class="mt-4">
+                <p class="text-lg font-medium">Score: <span id="score">0</span>/<span id="totalQuestions">0</span></p>
+            </div>
+        </div>
+
+        <div id="mcqSection" class="bg-white rounded-lg shadow-lg p-6 hidden">
+            <h2 class="text-xl font-semibold mb-4">Multiple Choice Questions</h2>
+            <div id="mcqQuestions" class="space-y-6"></div>
+        </div>
+
+        <div id="tfSection" class="bg-white rounded-lg shadow-lg p-6 hidden">
+            <h2 class="text-xl font-semibold mb-4">True/False Questions</h2>
+            <div id="tfQuestions" class="space-y-6"></div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 p-4 text-center">
+        <p>&copy; 2023 Software Engineering Exam. All rights reserved.</p>
+    </footer>
+
+    <script src="mcqData.js"></script>
+    <script src="tfData.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
